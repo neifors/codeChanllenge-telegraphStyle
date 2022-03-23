@@ -30,10 +30,17 @@ function renderCreateForm() {
 
 
 function renderHomepage() {
+   const homeWrapper = document.createElement('div')
+   homeWrapper.id = "home-wrapper"
    const homepageTitle = document.createElement('h1')
-   homepageTitle.id = "form-title"
+   homepageTitle.id = "home-title"
    homepageTitle.textContent = "A place where to feel free sharing your thougths"
-   main.appendChild(homepageTitle)
+   homeWrapper.appendChild(homepageTitle)
+   const img = document.createElement('img')
+   img.src = "./static/img/homepage.jpg"
+   img.id = "home-img"
+   homeWrapper.appendChild(img)
+   main.appendChild(homeWrapper)
 }
 
 async function renderAllPosts() {

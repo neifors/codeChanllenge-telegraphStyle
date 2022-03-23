@@ -26,7 +26,7 @@ div#form-wrapper {
    margin-top: 3%;
 }
 
-div#form-wrapper h1#form-title {
+div#form-wrapper h1#form-title, main h1#home-title {
    font-family: 'Inspiration', cursive;
    font-size: 60px;
 }
@@ -51,4 +51,14 @@ div#form-wrapper form input[type='submit']{
    font-size: 20px;
 }
 
+main div#home-wrapper{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+main div#home-wrapper img#home-img {
+   border-radius: 20px;
+}
 
