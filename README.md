@@ -17,3 +17,8 @@
 - Using your terminal, go into `server-mongodb` folder and run `docker-compose up`
 - This command will install everything you need to run the server and will deploy it at http://localhost:3000/
 
+# HOW CLIENT LOOKS
+
+![HOMEPAGE](./client/static/img/client-home.png)
+![ALL THE POSTS](./client/static/img/client-posts.png)
+![ADD A NEW POST](./client/static/img/client-form.png)
