@@ -22,6 +22,19 @@ class Post{
             }
         })
     }
+    static create(title,pseudonym, body){
+        return new Promise (async (resolve, reject) => {
+            try {
+                const db = await init();
+                let postData = await db.collection('posts').insertOne({title,pseudonym, body})
+                let newPost = new Post(postData.ops[0]);
+                resolve (newPost);
+            } catch (err) {
+                reject('Error creating post');
+            }
+        });
+    }
+
 }
 
 module.exports=Post;
