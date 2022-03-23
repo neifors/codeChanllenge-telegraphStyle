@@ -23,8 +23,11 @@ function updateMain(hash){
          default:
             render404(); break;
       }
+   } else {
+      renderHomepage();
    }
 }
+
 
 
 function updateContent(){
