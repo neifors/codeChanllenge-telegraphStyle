@@ -52,6 +52,8 @@ async function renderAllPosts() {
 function renderCard(data){
    let card = document.createElement('div');
    card.className = 'card'; 
+   const color = randomColor()
+   card.style = `background-color: ${color};`
    let title = document.createElement('h3');
    title.className = 'card-title';
    title.textContent = data.title;
@@ -60,12 +62,17 @@ function renderCard(data){
    message.textContent = data.body;
    let signature = document.createElement('p')
    signature.className = "signature";
-   signature.textContent = data.pseudonym;
+   signature.textContent = `by ${data.pseudonym}`;
 
    card.appendChild(title);
    card.appendChild(message);
    card.appendChild(signature);
    main.appendChild(card);
+}
+
+function randomColor() {
+   const colorList = ["rgb(238, 195, 232)","rgb(187, 240, 187)","rgb(235, 243, 164)","rgb(165, 109, 218)","rgb(156, 250, 242)","rgb(231, 129, 129)","rgb(129, 144, 231)","rgb(153, 231, 129)"]
+   return colorList[Math.floor(Math.random() * 8)]
 }
 
 function render404() {

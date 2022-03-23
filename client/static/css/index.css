@@ -1,3 +1,8 @@
+body {
+   background-color: rgb(227, 231, 238);
+}
+
+
 nav {
    display: flex;
    justify-content: space-around;
@@ -62,3 +67,36 @@ main div#home-wrapper img#home-img {
    border-radius: 20px;
 }
 
+main div.card {
+   position: relative;
+   border: 2px solid black;
+   width: 225px;
+   height: 250px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 40px;
+   padding: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+main div.card h3.card-title {
+   font-size: 25px;
+   margin-top: 10px;
+   font-family: 'Bebas Neue', cursive;
+}
+
+main div.card p.card-message {
+   padding: 10px;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+main div.card p.signature {
+   position: absolute;
+   bottom: 5px;
+   right: 10px;
+   margin: 2px;
+   color: #383838;
+   font-style: italic;
+
+}
