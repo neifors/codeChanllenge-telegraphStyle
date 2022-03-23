@@ -23,10 +23,32 @@ main {
 
 
 div#form-wrapper {
-   margin-top: 100px;
+   margin-top: 3%;
+}
+
+div#form-wrapper h1#form-title {
+   font-family: 'Inspiration', cursive;
+   font-size: 60px;
 }
 
 div#form-wrapper form{
    display: flex;
    flex-direction: column;
 }
+
+div#form-wrapper form input{
+   margin-bottom: 20px;
+}
+
+div#form-wrapper form textarea{
+   resize: none;
+}
+
+div#form-wrapper form input[type='submit']{
+   margin: 20px auto;
+   background-color: rgb(165, 109, 218);
+   border-radius: 10px;
+   font-size: 20px;
+}
+
+

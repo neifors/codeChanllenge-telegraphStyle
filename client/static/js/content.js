@@ -9,7 +9,7 @@ function renderCreateForm() {
    const fields = [
       { tag: 'input', attributes: { type: 'text', id: 'title-field', name: 'title', placeholder: 'Title' } },
       { tag: 'input', attributes: { type: 'text', id: 'pseudonym-field', name: 'pseudonym', placeholder: 'Pseudonym' } },
-      { tag: 'textarea', attributes: { id: 'message-field', name: 'message', placeholder: 'Message'}},
+      { tag: 'textarea', attributes: { id: 'message-field', cols: 30, rows: 12,  name: 'message', placeholder: 'Message'}},
       { tag: 'input', attributes: { type: 'submit', value: 'Publish' } }
    ]
 
