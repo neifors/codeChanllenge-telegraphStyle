@@ -7,14 +7,14 @@ const Post = require('../models/post')
 router.get('/', async (req, res) => {
     try {
         const p = await Post.all
-        res.json({p})
+        res.json(p)
     } catch(err) {
         res.status(500).json({err})
     }
 })
 router.post('/', async (req, res)=>{
     try{
-        const p=await Post.create(req.body.title,req.body.pseudonym,req.body.body)
+        const p=await Post.create(req.body.title,req.body.pseudonym,req.body.message)
         res.json({p})
     } catch(err) {
         res.status(500).json({err})

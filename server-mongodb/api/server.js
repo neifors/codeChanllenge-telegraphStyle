@@ -12,8 +12,8 @@ const postRoutes=require('./controllers/posts.js')
 server.use('/posts', postRoutes)
 
 
-server.get('*', (req, res) => {
-    res.sendFile(path.resolve(`client/index.html`));
-  });
+server.get('/', (req, res) => {
+    res.json('Hello World')
+});
 console.log(__dirname)
 module.exports = server
