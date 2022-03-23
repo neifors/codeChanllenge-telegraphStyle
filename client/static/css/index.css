@@ -1,0 +1,32 @@
+nav {
+   display: flex;
+   justify-content: space-around;
+   font-family: 'Palette Mosaic', cursive;
+   font-size: 40px;
+}
+
+nav a{
+   text-decoration: none;
+   color: black
+}
+
+nav a.current{
+   text-shadow: 2px 2px #8a8989;
+}
+
+main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+
+div#form-wrapper {
+   margin-top: 100px;
+}
+
+div#form-wrapper form{
+   display: flex;
+   flex-direction: column;
+}

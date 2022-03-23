@@ -2,12 +2,14 @@ function renderCreateForm() {
    const formTitle = document.createElement('h1')
    formTitle.id = "form-title"
    formTitle.textContent = "Leave your thougths here"
-   main.appendChild(formTitle)
+   const formWrapper = document.createElement('div')
+   formWrapper.id = 'form-wrapper';
+
    
    const fields = [
-      { tag: 'input', attributes: { type: 'text', name: 'title', placeholder: 'Title' } },
-      { tag: 'input', attributes: { type: 'text', name: 'pseudonym', placeholder: 'Pseudonym' } },
-      { tag: 'textarea', attributes: { name: 'message', placeholder: 'Message'}},
+      { tag: 'input', attributes: { type: 'text', id: 'title-field', name: 'title', placeholder: 'Title' } },
+      { tag: 'input', attributes: { type: 'text', id: 'pseudonym-field', name: 'pseudonym', placeholder: 'Pseudonym' } },
+      { tag: 'textarea', attributes: { id: 'message-field', name: 'message', placeholder: 'Message'}},
       { tag: 'input', attributes: { type: 'submit', value: 'Publish' } }
    ]
 
@@ -19,8 +21,11 @@ function renderCreateForm() {
            form.appendChild(field);
        })
    })
+
    form.addEventListener('submit', postData)
-   main.appendChild(form);
+   formWrapper.appendChild(formTitle)
+   formWrapper.appendChild(form)
+   main.appendChild(formWrapper);
 }
 
 
@@ -54,4 +59,11 @@ function renderCard(data){
    card.appendChild(message);
    card.appendChild(signature);
    main.appendChild(card);
+}
+
+function render404() {
+   const error = document.createElement('h1')
+   error.id = "error"
+   error.textContent = "ERROR: 404 NOT FOUND"
+   main.appendChild(error)
 }

@@ -7,7 +7,7 @@ window.addEventListener('hashchange', updateContent);
 
 function updateNav(hash) {
    const updateLink = link => {
-       link.classList = (link.textContent == '+' && hash.includes('new') || hash.includes(link.textContent) || link.textContent == 'Home' && !hash) ? ['navlink', 'current'] : ['navlink']
+       link.classList = (link.textContent == '+' && hash.includes('new') || hash.includes(link.textContent) || link.textContent == 'Home' && !hash) ? ['current'] : ['navlink']
    };
    navLinks.forEach(updateLink)
 }
@@ -19,7 +19,7 @@ function updateMain(hash){
          case '#new':
             renderCreateForm(); break;
          case '#posts':
-            renderShowAll(); break;
+            renderAllPosts(); break;
          default:
             render404(); break;
       }
