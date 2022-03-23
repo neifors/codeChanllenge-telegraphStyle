@@ -1,0 +1,30 @@
+  
+version: '3'
+services:
+  server:
+    image: node:12.18.4
+    working_dir: /code
+    ports: 
+      - 3000:3000
+    environment: 
+      - DB_NAME=shelter
+      - DB_CONNECTION=mongodb://futureproof:shelterpass@db:27017
+    depends_on:
+      - db
+    volumes:
+      - type: bind
+        source: ./api
+        target: /code
+    command: bash -c "npm install && npm start"
+
+  db:
+    image: mongo:4-focal #I can only run mongo below v5
+    volumes:
+      - "dbdata:/var/lib/mongodb/data"
+      - "./db/fightseeds.js:/docker-entrypoint-initdb.d/fightseeds.js:ro"
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=futureproof
+      - MONGO_INITDB_DATABASE=shelter
+      - MONGO_INITDB_ROOT_PASSWORD=shelterpass
+volumes:
+  dbdata:
