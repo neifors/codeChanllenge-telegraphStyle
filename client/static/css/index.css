@@ -83,10 +83,12 @@ main div.card {
 main div.card h3.card-title {
    font-size: 25px;
    margin-top: 10px;
+   margin-bottom: 10px;
    font-family: 'Bebas Neue', cursive;
 }
 
 main div.card p.card-message {
+   margin-top: 0;
    padding: 10px;
    font-family: 'Courier New', Courier, monospace;
 }
@@ -99,4 +101,11 @@ main div.card p.signature {
    color: #383838;
    font-style: italic;
 
+}
+
+main#grid {
+   display: grid;
+   grid-template-columns: repeat(4, minmax(250px, 1fr));
+   grid-gap: 20px;
+   align-items: stretch;
 }
