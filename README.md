@@ -2,6 +2,11 @@
 
 [Michael Nelson](https://github.com/mwezn), [Isabel Repetto](https://github.com/neifors)
 
+## Project description
+
+This is a place where you can post anything under any pseudonym.
+Behind the client (frontend) we have a server running, making use of a Mongo Database to save and display every post.
+
 ## Installation & Usage
 
 - Clone this respository
@@ -16,6 +21,12 @@
 
 - Using your terminal, go into `server-mongodb` folder and run `docker-compose up`
 - This command will install everything you need to run the server and will deploy it at http://localhost:3000/
+
+## Challenges & Wins
+
+### Challenges
+
+- 
 
 # HOW CLIENT LOOKS
 
