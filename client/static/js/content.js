@@ -21,6 +21,7 @@ function renderCreateForm() {
            form.appendChild(field);
        })
    })
+   main.id = "flex"
 
    form.addEventListener('submit', postData)
    formWrapper.appendChild(formTitle)
@@ -39,6 +40,9 @@ function renderHomepage() {
    const img = document.createElement('img')
    img.src = "./static/img/homepage.jpg"
    img.id = "home-img"
+
+   main.id = "flex"
+
    homeWrapper.appendChild(img)
    main.appendChild(homeWrapper)
 }
@@ -63,6 +67,8 @@ function renderCard(data){
    let signature = document.createElement('p')
    signature.className = "signature";
    signature.textContent = `by ${data.pseudonym}`;
+
+   main.id = "grid"
 
    card.appendChild(title);
    card.appendChild(message);
