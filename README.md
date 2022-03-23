@@ -50,5 +50,9 @@ We had no time for testing
 # HOW CLIENT LOOKS
 
 ![HOMEPAGE](./client/static/img/client-home.png)
+
+
 ![ALL THE POSTS](./client/static/img/client-posts.png)
+
+
 ![ADD A NEW POST](./client/static/img/client-form.png)
