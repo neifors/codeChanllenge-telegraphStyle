@@ -1,3 +1,0 @@
-to start: sudo docker-compose up
-to stop: sudo docker-compose down --volumes --remove-orphans
-
