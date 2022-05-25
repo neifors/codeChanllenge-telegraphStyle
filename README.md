@@ -7,6 +7,8 @@
 This is a place where you can post anything under any pseudonym.
 Behind the client (frontend) we have a server running, making use of a Mongo Database to save and display every post.
 
+Try [here](https://free-thoughts.netlify.app).
+
 ## Installation & Usage
 
 - Clone this respository
