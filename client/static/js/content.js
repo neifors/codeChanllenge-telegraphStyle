@@ -50,7 +50,6 @@ function renderHomepage() {
 async function renderAllPosts() {
    const data = await getAll();
    data.forEach(a => renderCard(a));
-
 }
 
 function renderCard(data){
