@@ -41,7 +41,7 @@ Behind the client (frontend) we have a server running, making use of a Mongo Dat
 ### Challenges
 
 - Set random colors to every card containing the post data. Solved using the Math.random method over an array containing differents colors. Everytime you refresh the page, colors are changing.
-- Experienced a few issues at the beggining to get docker-compose.yaml running properly.
+- Experienced a few issues at the beginning to get docker-compose.yaml running properly.
 
 ## Testing
 

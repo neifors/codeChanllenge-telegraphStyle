@@ -1,9 +1,11 @@
 function renderCreateForm() {
    const formTitle = document.createElement('h1')
    formTitle.id = "form-title"
-   formTitle.textContent = "Leave your thougths here"
+   formTitle.textContent = "Leave your thoughts here"
    const formWrapper = document.createElement('div')
    formWrapper.id = 'form-wrapper';
+   const closeBtn=document.createElement('button')
+   closeBtn.textContent=`X`
 
    
    const fields = [
@@ -24,8 +26,12 @@ function renderCreateForm() {
    main.id = "flex"
 
    form.addEventListener('submit', postData)
+   closeBtn.addEventListener('click', async e => {
+      window.location.hash='#posts'
+   })
    formWrapper.appendChild(formTitle)
    formWrapper.appendChild(form)
+   formWrapper.appendChild(closeBtn)
    main.appendChild(formWrapper);
 }
 
@@ -49,6 +55,12 @@ function renderHomepage() {
 
 async function renderAllPosts() {
    const data = await getAll();
+   console.log(data, !data)
+   if (!data){
+      let d=document.createElement('h3')
+      d.textContent='Loading posts'
+      main.appendChild(d)
+   }
    data.forEach(a => renderCard(a));
 
 }
