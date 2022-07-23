@@ -41,7 +41,7 @@ function renderHomepage() {
    homeWrapper.id = "home-wrapper"
    const homepageTitle = document.createElement('h1')
    homepageTitle.id = "home-title"
-   homepageTitle.textContent = "A place where to feel free sharing your thougths"
+   homepageTitle.textContent = "A place where to feel free sharing your thoughts"
    homeWrapper.appendChild(homepageTitle)
    const img = document.createElement('img')
    img.src = "./static/img/homepage.jpg"
