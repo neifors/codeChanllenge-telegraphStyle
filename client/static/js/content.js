@@ -49,7 +49,14 @@ function renderHomepage() {
 
 async function renderAllPosts() {
    const data = await getAll();
+   console.log(data, !data)
+   if (!data){
+      let d=document.createElement('h3')
+      d.textContent='Loading posts'
+      main.appendChild(d)
+   }
    data.forEach(a => renderCard(a));
+
 }
 
 function renderCard(data){
